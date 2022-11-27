@@ -1,0 +1,66 @@
+<div class="row d-flex justify-content-center">
+  <div class="col-4">
+    <div class="text-center">
+      <%- include("./inc/alert") %>
+      <main class="form-signin">
+        <form action="/products/add" method="post">
+          <h1 class="h3 mb-3 fw-normal">اضافه کردن محصول</h1>
+          <div class="form-floating m-2">
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="InputFullname"
+              placeholder="حسین رحیمی"
+              autofocus
+              required
+            />
+            <label for="InputFullname">نام محصول</label>
+          </div>
+          <div class="form-floating m-2">
+            <input
+              type="number"
+              name="count"
+              class="form-control"
+              id="floatingInput"
+              placeholder="تعداد"
+              required
+            />
+            <label for="floatingInput">تعداد</label>
+          </div>
+          <div class="form-floating m-2">
+            <input
+              type="number"
+              name="price"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="قیمت"
+              required
+            />
+            <label for="floatingPassword">قیمت</label>
+          </div>
+          <div class="m-2">
+            <select class="form-select" aria-label="Default select example" name="storeroomID">
+              <option selected>نام انبار</option>
+              <% sr.forEach(e =>{ %> 
+              <option value="<%= e.storeroomID %> "><%= e.name %> </option>
+              <% }) %>
+            </select>
+          </div>
+          <div class="m-2">
+            <select class="form-select" aria-label="Default select example" name="categoryID">
+              <option selected>دسته بندی</option>
+              <% cat.forEach(e =>{ %> 
+              <option value="<%= e.categoryID %> "><%= e.name %> </option>
+              <% }) %> 
+            </select>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">
+            افزودن
+          </button>
+          <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+        </form>
+      </main>
+    </div>
+  </div>
+</div>

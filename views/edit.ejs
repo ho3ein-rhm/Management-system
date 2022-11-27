@@ -1,0 +1,80 @@
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" dir="auto">
+  <div class="py-5 text-center">
+    <h2> ویرایش کاربران</h2>
+  </div>
+  <div class="row g-3">
+    <div class="col-md-7 col-lg-8">
+      <h4 class="mb-3">مشخصات کاربران</h4>
+      <form class="needs-validation" action="/users/update/<%= id %> " method="post" novalidate>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="firstName" class="form-label">نام و نام خانوادگی</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              id="fullname"
+              placeholder=""
+              value="<%= user.name %>"
+              required
+            />
+            <div class="invalid-feedback">يرجى إدخال اسم أول صحيح.</div>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="lastName" class="form-label">نام کاربری</label>
+            <input
+              type="text"
+              class="form-control"
+              id="userName"
+              name="userName"
+              placeholder=""
+              value="<%= user.userNamr %>"
+              required
+            />
+            <div class="invalid-feedback">يرجى إدخال اسم عائلة صحيح.</div>
+          </div>
+
+          <div class="col-12">
+            <label for="phoneNumber" class="form-label">شماره تلفن</label>
+            <div class="input-group has-validation">
+              <input
+                type="number"
+                name="phoneNumber"
+                class="form-control"
+                id="phoneNumber"
+                placeholder=""
+                required
+                value="<%= user.phoneNumber %>"
+              />
+              <div class="invalid-feedback">اسم المستخدم الخاص بك مطلوب.</div>
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="address" class="form-label">آدرس</label>
+            <input
+              type="text"
+              name="adress"
+              class="form-control"
+              id="address"
+              placeholder=""
+              value="<%= user.adress %>"
+              required
+            />
+            <div class="invalid-feedback">يرجى إدخال عنوان الشحن الخاص بك.</div>
+          </div>
+        <button class="w-50 btn btn-primary btn-lg" type="submit">
+          ویرایش
+        </button>
+      </form>
+    </div>
+  </div>
+</main>
+<footer class="my-5 pt-5 text-muted text-center text-small">
+  <p class="mb-1">&copy; 2021-2017 اسم الشركة</p>
+  <ul class="list-inline">
+    <li class="list-inline-item"><a href="#">سياسة الخصوصية</a></li>
+    <li class="list-inline-item"><a href="#">اتفاقية الاستخدام</a></li>
+    <li class="list-inline-item"><a href="#">الدعم الفني</a></li>
+  </ul>
+</footer>

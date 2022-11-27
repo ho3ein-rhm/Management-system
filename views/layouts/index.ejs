@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.84.0" />
+    <title><%- pagetitle %></title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+
+    <meta name="theme-color" content="#7952b3" />
+    <!-- Custom styles for this template -->
+    <% if (path === "/login") {%>
+    <link href="/css/login.css" rel="stylesheet" />
+    <% } %>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="text-center">
+    <%- body %>
+    <script src="/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

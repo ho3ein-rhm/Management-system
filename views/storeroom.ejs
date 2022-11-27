@@ -1,0 +1,73 @@
+
+  <h2>لیست انبار ها</h2>
+  <div>
+    <%- include("./inc/alert") %>
+    <form action="/storeroom/add" method="post">
+      <div class="row">
+        <div class="col-3">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="نام انبار"
+            name="name"
+            required
+          />
+        </div>
+        <div class="col-4">
+          <input
+            class="form-control"
+            type="text"
+            placeholder="آدرس"
+            name="adress"
+            required
+          />
+        </div>
+
+        <div class="col-3">
+          <input
+            class="form-control"
+            type="number"
+            placeholder="شماره تلفن"
+            name="phoneNumber"
+            required
+          />
+        </div>
+          <div class="col-2">
+            <input class="btn btn-primary" type="submit" value="ثبت" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="table-responsive">
+    <% if(storerome.length > 0){ %> 
+    <table class="table table-striped table-sm">
+      <thead class="">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">نام</th>
+          <th scope="col">شماره تلفن</th>
+          <th scope="col">آدرس</th>
+          <th scope="col">ویرایش</th>
+          <th scope="col">حذف</th>
+        </tr>
+      </thead>
+      <tbody>
+       <% storerome.forEach(e => {%> 
+        <tr>
+          <td><%= e.storeroomID %> </td>
+          <td><%= e.name %> </td>
+          <td><%= e.phoneNumber %> </td>
+          <td><%= e.adress %> </td>
+          <td><a href="#" class="btn btn-warning"> ویرایش</a></td>
+          <td><a href="#" class="btn btn-danger">حذف</a></td>
+        </tr>
+        <% }) %>  
+      </tbody>
+    </table>
+<% }else{ %> 
+    <div class="container text-center">
+      <h2 class="text-danger">انباری برای نمایش وجود ندارد</h2>
+    </div>
+    <% } %>   
+  </div>

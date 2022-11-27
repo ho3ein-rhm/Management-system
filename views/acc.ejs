@@ -1,0 +1,115 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div>
+        <h2>پنل حسابداری</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <section class="schedule section" id="schedule">
+      <div class="container">
+        <div class="row">
+          <div class="py-5 col-sm-12 col-lg-6">
+            <div class="text-right">
+              <h2 class="">درآمدها</h2>
+            </div>
+
+            <div>
+              <table class="table table-bordered schedule-table">
+                <thead class="thead-light">
+                  <th></th>
+                  <th>مبلغ(تومان)</th>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>مقدار فروش</td>
+                    <td>
+                      <strong><%= x[0] %></strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="py-5 col-12 col-lg-6">
+            <div class="text-right">
+              <h2 class="">طلب ها</h2>
+            </div>
+
+            <div>
+              <table class="table table-bordered schedule-table">
+                <thead class="thead-light">
+                  <th></th>
+                  <th>مبلغ</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>پرداختی نسیه</td>
+                    <td>
+                      <strong><%= x[1] %> </strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="py-5 col-12 col-lg-6">
+            <div class="text-right">
+              <h2 class="">دارایی ها</h2>
+            </div>
+
+            <div>
+              <table class="table table-bordered schedule-table">
+                <thead class="thead-light">
+                  <th></th>
+                  <th>مبلغ(تومان)</th>
+                  <th>تعداد کالاها</th>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>کل موجودی انبار</td>
+                    <td>
+                      <strong><%= y %> </strong>
+                    </td>
+                    <td>
+                      <strong><%= z %> </strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="py-5 col-12 col-lg-6">
+            <div class="text-right">
+              <h2 class="">بدهی ها</h2>
+            </div>
+
+            <div>
+              <table class="table table-bordered schedule-table">
+                <thead class="thead-light">
+                  <th></th>
+                  <th></th>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>چک های پرداختی</td>
+                    <td>
+                      <strong><%= g %></strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

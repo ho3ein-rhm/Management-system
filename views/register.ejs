@@ -1,0 +1,85 @@
+<div class="text-center">
+  <%- include("./inc/alert") %>
+  <main class="form-signin">
+    <form action="/users/register" method="post">
+      <h1 class="h3 mb-3 fw-normal">ثبت نام</h1>
+      <div class="form-floating">
+        <input
+          type="text"
+          name="fullname"
+          class="form-control"
+          id="InputFullname"
+          placeholder="حسین رحیمی"
+          autofocus
+          required
+        />
+        <label for="InputFullname">نام و نام خانوادگی</label>
+      </div>
+      <!-- <div class="form-floating">
+        <input
+          type="text"
+          name="userName"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+          required
+        />
+        <label for="floatingInput">نام کاربری</label>
+      </div> -->
+      <div class="form-floating">
+        <input
+          type="tel"
+          name="PhoneNumber"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="شماره تلفن"
+          required
+        />
+        <label for="floatingPassword">شماره تلفن</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="Adress"
+          name="Address"
+          placeholder="آدرس"
+          required
+        />
+        <label for="Adress">آدرس</label>
+      </div>
+      <!-- <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="Password"
+          name="password"
+          placeholder="رمز عبور"
+          required
+        />
+        <label for="Password">رمز عبور</label>
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="InputConfirmPassword"
+          name="confirmPassword"
+          placeholder="تکرار رمز عبور"
+          required
+        />
+        <label for="InputConfirmPassword">تکرار رمز عبور</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <a href="/user/login" class="">حساب کاربری دارم</a>
+        </label>
+      </div> -->
+      <button class="w-100 btn btn-lg btn-primary" type="submit">
+        ثبت نام
+      </button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    </form>
+  </main>
+</div>

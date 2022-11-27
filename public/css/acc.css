@@ -1,0 +1,51 @@
+
+
+
+:root {
+  --primary-color: #f13a11;
+  --white-color: #ffffff;
+  --dark-color: #171819;
+  --about-bg-color: #f9f9f9;
+
+}
+
+
+/*---------------------------------------
+     SCHEDULE             
+  -----------------------------------------*/
+
+.schedule {
+  background: var(--white-color);
+}
+table {
+  border-radius: 10px !important;
+}
+.schedule-table {
+  display: table;
+  text-align: center;
+}
+
+
+.schedule-table strong {
+  color: var(--dark-color);
+}
+
+.table .thead-light th,
+.schedule-table tr td:first-child {
+  background: var(--primary-color);
+  /* border: 1px solid #212122; */
+  color: var(--white-color);
+
+}
+
+.table-bordered td {
+}
+
+.table td,
+.table th {
+  padding: 1rem;
+}
+
+tbody, td {
+ border-width: 0 !important;
+}

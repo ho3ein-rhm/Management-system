@@ -1,0 +1,56 @@
+<% if(typeof errors != 'undefined') {%>
+<div class="alert alert-success alert-dismissible fade show position-absolute top-0 start-0" role="alert">
+  <svg
+    class="bi flex-shrink-0 me-2"
+    width="24"
+    height="24"
+    role="img"
+    aria-label="success:"
+  >
+    <use xlink:href="#exclamation-triangle-fill" />
+  </svg>
+  <%= errors %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% } %>
+<main class="form-signin">
+  <form action="/users/login" method="post">
+    <h1 class="h3 mb-3 fw-normal">لطفا وارد شوید</h1>
+    <div class="form-floating">
+      <input
+        type="text"
+        name="userNamr"
+        class="form-control"
+        id="floatingInput"
+        placeholder="نام کاربری"
+      />
+      <label for="floatingInput">نام کاربری</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="password"
+        name="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="رمز عبور"
+      />
+      <label for="floatingPassword">رمز عبور</label>
+    </div>
+    <div class="form-floating"></div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me" /> مرا بخاطر داشته باش
+      </label>
+    </div>
+    <button class="w-50 btn btn-primary" type="submit">ورود</button>
+    <a href="/users/register/<%= undefined %> " class="w-25 btn btn-success"
+      >ثبت نام</a
+    >
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+</main>

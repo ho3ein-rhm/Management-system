@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="mt-2">
+        <a href="/cheks" class="btn btn-dark float-end">بازگشت</a>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-4">
+      <div>
+        <h4>ثبت چک ها</h4>
+        <form action="/cheks/addcheks" method="post">
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              name="tittle"
+              id="tittle"
+              class="form-control"
+              placeholder="مثال : پرداخت قسط بانک تجارت"
+            />
+            <label for="tittle">عنوان</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="example1 form-control"
+              name="date"
+              id="date"
+              placeholder="مثال : 12/6/1400"
+            />
+            <label for="date">تاریخ</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              placeholder="به تومان وارد شود"
+              class="form-control"
+            />
+            <label for="amount">مبلغ</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              name="pymentTo"
+              id="pymentTo"
+              placeholder="حسین رحیمی"
+              class="form-control"
+            />
+            <label for="pymentTo">پرداختی به</label>
+          </div>
+          <div class="float-end w-50">
+            <input type="submit" class="btn btn-primary w-100"  value="ثبت" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

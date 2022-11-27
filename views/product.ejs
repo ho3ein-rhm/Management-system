@@ -1,0 +1,107 @@
+<div class="container">
+  <h2>کالاها</h2>
+</div>
+<%- include("./inc/message.ejs") %> 
+<div class="row my-2">
+  <div class="col-12">
+    <a href="/products/add" class="btn btn-primary my-2">افزودن کالا</a>
+    <form action="/category/add" method="post">
+      <div class="input-group">
+        <input type="text" placeholder="نام دسته بندی" name="name" />
+        <input type="submit" value="افزودن" class="btn btn-success" />
+      </div>
+    </form>
+  </div>
+</div>
+<% if(pr.length != 0){ %> 
+<div class="row my-2">
+  <div class="col-6">
+    <div>
+      <form action="/products/buyer" method="post">
+        <div class="input-group">
+          <form action="/category/select" method="post">
+            <select class="form-select" aria-label="Default select example" name="buyerID">
+              <option selected>لیست مشتری ها</option>
+              <% users.forEach(e =>{ %>
+              <option value="<%= e.id %>"><%= e.name %></option>
+              <% }) %>
+            </select>
+          </form>
+          <input type="submit" value="انتخاب" class="btn btn-primary" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="row my-2">
+  <div class="col-6">
+    <form action="">
+      <div class="input-group">
+        <form action="/category/select" method="post">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>نمایش کلی</option>
+            <% cat.forEach(e =>{ %>
+            <option value="<%= e.categoryID %> "><%= e.name %></option>
+            <% }) %>
+          </select>
+        </form>
+        <input type="button" value="مرتب سازی" class="btn btn-primary" />
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <% if( buyer != null){ %> 
+  <div class="mt-5">
+    <p>نام مشتری : <%= buyer.name %> </p>
+  </div>
+  <% }else{ %>
+    <div class="mt-5 text-danger">
+    <p>مشتری هنوز انتخاب  نشده است!</p>
+  </div>
+  <% } %> 
+  <table class="table table-striped table-sm">
+    <thead class="">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">نام</th>
+        <th scope="col">تعداد</th>
+        <th scope="col">دسته بندی</th>
+        <th scope="col">قیمت</th>
+        <th scope="col" class="text-center">تنظیمات</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% let i = 0 %> 
+      <% pr.forEach(e =>{ %>
+      <tr>
+        <td><%= i = i + 1 %></td>
+        <td><%= e.name %></td>
+        <td><%= e.Count %></td>
+        <td><%= findcat(cat,e.subCategoryID) %></td>
+        <td><%= e.price %></td>
+        <td class="text-center">
+          <a href="#" class="btn btn-warning"> ویرایش</a>
+          <a href="#" class="btn btn-danger">حذف</a>
+          <a href="#" class="btn btn-secondary">حذف تعداد</a>
+          <a
+            href="/shoppingcart/add/<%= e.idtblproducts %> "
+            class="btn btn-success"
+            >افزودن به سبد خرید</a
+          >
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+<% }else{ %>
+  <hr>
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center text-danger">
+        <h3>کالایی برای نمایش وجود ندارد</h3>
+      </div>
+    </div>
+  </div>
+<% } %>  
